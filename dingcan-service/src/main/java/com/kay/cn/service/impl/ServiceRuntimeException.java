@@ -1,6 +1,6 @@
 package com.kay.cn.service.impl;
 
-import com.kay.cn.exection.BaseRuntimeException;
+import com.kay.cn.BaseRuntimeException;
 
 public class ServiceRuntimeException extends BaseRuntimeException {
 

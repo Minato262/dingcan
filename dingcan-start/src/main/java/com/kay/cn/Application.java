@@ -10,9 +10,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @version v1.0
  */
 @SpringBootApplication(scanBasePackages = "com.kay.cn")
-public class StartApplication {
+public class Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(StartApplication.class, args);
+        SpringApplication.run(Application.class, args);
     }
 }

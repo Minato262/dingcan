@@ -1,4 +1,4 @@
-package com.kay.cn.exection;
+package com.kay.cn;
 
 public abstract class BaseRuntimeException extends RuntimeException {
 
