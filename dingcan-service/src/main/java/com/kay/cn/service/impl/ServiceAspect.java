@@ -22,7 +22,7 @@ public class ServiceAspect {
      * @throws ServiceRuntimeException Service 异常
      */
     @AfterThrowing(throwing = "ex", pointcut = "execution(* com.kay.cn.service.impl.*.*(..))")
-    public void handleProceeding(Throwable ex) throws ServiceRuntimeException {
+    public void handleProceeding(Throwable ex) {
         log.error("service exception:" + ex);
         throw new ServiceRuntimeException(ex);
     }
