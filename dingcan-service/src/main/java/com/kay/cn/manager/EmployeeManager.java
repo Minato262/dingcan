@@ -1,11 +1,11 @@
 package com.kay.cn.manager;
 
 /**
- * One Manager
+ * Two Manager 层
  *
  * @author kay
  */
-public interface HomeOneManager {
+public interface EmployeeManager {
 
     void test();
 }

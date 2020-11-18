@@ -1,6 +1,6 @@
 package com.kay.cn.aop;
 
-import com.kay.cn.service.impl.ServiceRuntimeException;
+import com.kay.cn.service.ServiceRuntimeException;
 import com.kay.cn.util.Result;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -17,7 +17,6 @@ import javax.servlet.http.HttpServletRequest;
 public class ControllerAspect {
 
     private static final String CONTROLLER_URL = "execution(public * com.kay.cn.controller..*.*(..))";
-
     private static final String REQUEST_ID_KEY = "requestId";
 
     private final HttpServletRequest request;

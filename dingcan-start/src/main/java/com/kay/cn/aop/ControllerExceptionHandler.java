@@ -1,6 +1,6 @@
 package com.kay.cn.aop;
 
-import com.kay.cn.service.impl.ServiceRuntimeException;
+import com.kay.cn.service.ServiceRuntimeException;
 import com.kay.cn.util.Result;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Scope;

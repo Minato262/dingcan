@@ -1,5 +1,6 @@
-package com.kay.cn.service.impl;
+package com.kay.cn.service.aop;
 
+import com.kay.cn.service.ServiceRuntimeException;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;

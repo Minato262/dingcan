@@ -1,0 +1,19 @@
+# springboot 默认配置
+server:
+  application:
+    name: user-auth
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Shanghai
+  port: 8080
+  aop:
+    proxy-target-class: true
+    auto: true
+
+# 模版引擎配置
+spring:
+  thymeleaf:
+    prefix: classpath:templates/
+    suffix: .html
+    mode: LEGACYHTML5
+    cache: false

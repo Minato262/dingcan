@@ -1,8 +1,8 @@
-package com.kay.cn.service.impl;
+package com.kay.cn.service;
 
-import com.kay.cn.BaseRuntimeException;
+import com.kay.cn.NestedRuntimeException;
 
-public class ServiceRuntimeException extends BaseRuntimeException {
+public class ServiceRuntimeException extends NestedRuntimeException {
 
     public ServiceRuntimeException() {
         super();

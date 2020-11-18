@@ -19,6 +19,10 @@ public final class Result implements Serializable {
         this.data = data;
     }
 
+    public static Result success(Object data) {
+        return new Result("200", "", data);
+    }
+
     public static Result failed(String message) {
         return new Result("", message, null);
     }

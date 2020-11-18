@@ -1,20 +1,20 @@
 package com.kay.cn.manager.impl;
 
-import com.kay.cn.manager.HomeOneManager;
+import com.kay.cn.manager.EmployeeManager;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 /**
- * One Manager 层
+ * One Manager
  *
  * @author kay
  */
 @Slf4j
-@Service(value = "oneManager")
-public class HomeOneManagerImpl implements HomeOneManager {
+@Service(value = "twoManager")
+public class EmployeeManagerImpl implements EmployeeManager {
 
     @Override
     public void test() {
-        log.info("HomeOneManger test().");
+        log.info("HomeTwoManger test().");
     }
 }
