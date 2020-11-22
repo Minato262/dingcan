@@ -19,6 +19,16 @@ public class BeanServiceFactory implements BeanFactoryAware {
     /**
      * 返回spring配置的bean
      */
+    public static Object getBean(String var1){
+        if (beanFactory == null) {
+            throw new BeanInitializationException("BeanServiceUtil init error, beanFactory is null");
+        }
+        return beanFactory.getBean(var1);
+    }
+
+    /**
+     * 返回spring配置的bean
+     */
     public static <T> T getBean(Class<T> requiredType){
         if (beanFactory == null) {
             throw new BeanInitializationException("BeanServiceUtil init error, beanFactory is null");

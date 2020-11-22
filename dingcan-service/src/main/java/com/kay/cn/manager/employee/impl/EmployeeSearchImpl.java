@@ -17,12 +17,12 @@ import java.util.Map;
 @Component
 public class EmployeeSearchImpl implements EmployeeSearch {
 
-    private final Map<String, EmployeeSearchVo> instance = EmployeeLocalCache.INSTANCE.getCache();
+    private static final EmployeeLocalCache CACHE_INSTANCE = EmployeeLocalCache.INSTANCE;
 
     @Override
     public List<EmployeeSearchVo> search(String keyword) {
         List<EmployeeSearchVo> list = new ArrayList<>(5);
-        for (Map.Entry<String, EmployeeSearchVo> entry : instance.entrySet()) {
+        for (Map.Entry<String, EmployeeSearchVo> entry : CACHE_INSTANCE.getCache().entrySet()) {
             if (list.size() == 5) {
                 break;
             }

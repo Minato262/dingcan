@@ -1,20 +1,32 @@
 package com.kay.cn.manager.employee.cache;
 
 import com.kay.cn.vo.EmployeeSearchVo;
+import org.springframework.util.CollectionUtils;
 
 import java.util.Map;
-import java.util.TreeMap;
 
+/**
+ *
+ *
+ * @author kay
+ */
 public enum EmployeeLocalCache {
     INSTANCE;
 
-    private final Map<String, EmployeeSearchVo> instance;
+    private Map<String, EmployeeSearchVo> instance;
 
     EmployeeLocalCache() {
-        instance = new TreeMap<>();
+        //
+    }
+
+    public void initCache(Map<String, EmployeeSearchVo> instance) {
+        this.instance = instance;
     }
 
     public Map<String, EmployeeSearchVo> getCache() {
+        if (CollectionUtils.isEmpty(instance)) {
+            throw new EmployeeLocalCacheFailException();
+        }
         return this.instance;
     }
 }

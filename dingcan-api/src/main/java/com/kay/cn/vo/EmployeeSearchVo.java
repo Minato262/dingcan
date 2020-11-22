@@ -1,27 +1,27 @@
 package com.kay.cn.vo;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 import java.io.Serializable;
 
-@Data
+@Getter
+@Setter
+@ToString
 public class EmployeeSearchVo implements Serializable {
 
-    private Long employeeId;
+    private String employeeJobCode;
 
     private String employeeRealName;
-
-    private String employeeJobCode;
 
     public EmployeeSearchVo() {
         //
     }
 
-    public EmployeeSearchVo(Long employeeId,
-                            String employeeRealName,
-                            String employeeJobCode) {
-        this.employeeId = employeeId;
-        this.employeeRealName = employeeRealName;
+    public EmployeeSearchVo(String employeeJobCode,
+                            String employeeRealName) {
         this.employeeJobCode = employeeJobCode;
+        this.employeeRealName = employeeRealName;
     }
 }
