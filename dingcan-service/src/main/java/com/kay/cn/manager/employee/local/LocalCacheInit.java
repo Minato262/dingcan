@@ -1,4 +1,4 @@
-package com.kay.cn.manager.employee.cache;
+package com.kay.cn.manager.employee.local;
 
 import org.springframework.stereotype.Component;
 

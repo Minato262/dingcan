@@ -1,4 +1,4 @@
-package com.kay.cn.manager;
+package com.kay.cn.manager.employee;
 
 /**
  * Two Manager 层

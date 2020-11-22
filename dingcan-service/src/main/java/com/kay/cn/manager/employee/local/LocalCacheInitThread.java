@@ -1,5 +1,6 @@
-package com.kay.cn.manager.employee.cache;
+package com.kay.cn.manager.employee.local;
 
+import com.kay.cn.manager.employee.cache.EmployeeLocalCache;
 import com.kay.cn.vo.EmployeeSearchVo;
 import lombok.extern.slf4j.Slf4j;
 
@@ -13,7 +14,7 @@ public class LocalCacheInitThread implements Runnable {
     @Override
     public void run() {
         log.info("local cache, start!");
-        Map<String, EmployeeSearchVo> map = new LocalEmployeeResource().getContent();
+        Map<String, EmployeeSearchVo> map = new EmployeeFileResource().getContent();
         CACHE_INSTANCE.initCache(map);
         log.info("local cache, end! success={}", map.size());
     }

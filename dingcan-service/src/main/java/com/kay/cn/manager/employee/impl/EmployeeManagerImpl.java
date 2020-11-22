@@ -1,6 +1,6 @@
-package com.kay.cn.manager.impl;
+package com.kay.cn.manager.employee.impl;
 
-import com.kay.cn.manager.EmployeeManager;
+import com.kay.cn.manager.employee.EmployeeManager;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
