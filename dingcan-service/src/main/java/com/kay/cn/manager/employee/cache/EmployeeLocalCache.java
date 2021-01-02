@@ -6,7 +6,7 @@ import org.springframework.util.CollectionUtils;
 import java.util.Map;
 
 /**
- *
+ * 本地缓存
  *
  * @author kay
  */

@@ -19,11 +19,13 @@ public class EmployeeSearchImpl implements EmployeeSearch {
 
     private static final EmployeeLocalCache CACHE_INSTANCE = EmployeeLocalCache.INSTANCE;
 
+    private static final int SEARCH_LENGTH = 5;
+
     @Override
     public List<EmployeeSearchVo> search(String keyword) {
-        List<EmployeeSearchVo> list = new ArrayList<>(5);
+        List<EmployeeSearchVo> list = new ArrayList<>(SEARCH_LENGTH);
         for (Map.Entry<String, EmployeeSearchVo> entry : CACHE_INSTANCE.getCache().entrySet()) {
-            if (list.size() == 5) {
+            if (list.size() == SEARCH_LENGTH) {
                 break;
             }
 

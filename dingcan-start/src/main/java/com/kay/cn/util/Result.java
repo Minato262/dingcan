@@ -6,11 +6,10 @@ import java.io.Serializable;
 
 @Data
 public final class Result implements Serializable {
+    private static final long serialVersionUID = 1905122041950251207L;
 
     private final String code;
-
     private final String message;
-
     private final Object data;
 
     public Result(String code, String message, Object data) {
