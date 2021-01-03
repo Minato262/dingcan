@@ -1,4 +1,4 @@
-package com.kay.cn.manager.employee.local;
+package com.kay.cn.manager.employee.load;
 
 import org.springframework.stereotype.Component;
 
@@ -6,14 +6,22 @@ import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 import java.util.concurrent.ExecutorService;
 
+/**
+ *
+ *
+ * @author kay
+ */
 @Component
-public class LocalCacheInit {
+public class EmployeeResourceLoad {
 
     @Resource
     private ExecutorService cacheExecutorService;
 
+    @Resource
+    private EmployeeResourceLoadThread employeeResourceLoadThread;
+
     @PostConstruct
     private void init() {
-        cacheExecutorService.execute(new LocalCacheInitThread());
+        cacheExecutorService.execute(employeeResourceLoadThread);
     }
 }

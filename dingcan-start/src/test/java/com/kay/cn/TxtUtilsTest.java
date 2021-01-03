@@ -1,6 +1,6 @@
 package com.kay.cn;
 
-import com.kay.cn.manager.employee.local.EmployeeFileResource;
+import com.kay.cn.manager.employee.load.EmployeeResource;
 import com.kay.cn.util.FileUtils;
 import com.kay.cn.vo.EmployeeSearchVo;
 import org.junit.Assert;
@@ -12,7 +12,7 @@ public class TxtUtilsTest {
 
     @Test
     public void getContentTest() {
-        EmployeeFileResource employeeLocalTxt = new EmployeeFileResource();
+        EmployeeResource employeeLocalTxt = new EmployeeResource();
         Map<String, EmployeeSearchVo> content = employeeLocalTxt.getContent();
         Assert.assertNotNull(content);
     }

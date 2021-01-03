@@ -1,9 +1,8 @@
 package com.kay.cn.util;
 
 import org.springframework.beans.BeansException;
-import org.springframework.beans.factory.BeanFactory;
-import org.springframework.beans.factory.BeanFactoryAware;
-import org.springframework.beans.factory.BeanInitializationException;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
 
 /**
@@ -12,32 +11,32 @@ import org.springframework.stereotype.Component;
  * @author kay
  */
 @Component
-public class BeanServiceFactory implements BeanFactoryAware {
+public class BeanServiceFactory implements ApplicationContextAware {
 
-    private static BeanFactory beanFactory;
+    private static ApplicationContext applicationContext;
 
     @Override
-    public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
-        BeanServiceFactory.beanFactory = beanFactory;
+    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+        if (BeanServiceFactory.applicationContext == null) {
+            BeanServiceFactory.applicationContext = applicationContext;
+        }
     }
 
     /**
-     * 返回spring配置的bean
+     * 获取applicationContext
      */
-    public static Object getBean(String var1) {
-        if (beanFactory == null) {
-            throw new BeanInitializationException("BeanServiceUtil init error, beanFactory is null");
-        }
-        return beanFactory.getBean(var1);
+    public static ApplicationContext getApplicationContext() {
+        return applicationContext;
     }
 
     /**
-     * 返回spring配置的bean
+     * 通过class获取Bean.
+     *
+     * @param clazz
+     * @param <T>
+     * @return
      */
-    public static <T> T getBean(Class<T> requiredType) {
-        if (beanFactory == null) {
-            throw new BeanInitializationException("BeanServiceUtil init error, beanFactory is null");
-        }
-        return beanFactory.getBean(requiredType);
+    public static <T> T getBean(Class<T> clazz) {
+        return getApplicationContext().getBean(clazz);
     }
 }

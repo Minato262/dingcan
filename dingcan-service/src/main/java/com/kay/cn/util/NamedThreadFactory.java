@@ -21,12 +21,12 @@ public class NamedThreadFactory implements ThreadFactory {
     }
 
     @Override
-    public Thread newThread(Runnable r) {
-        Thread t = new Thread(this.group, r, this.namePrefix + this.threadNumber.getAndIncrement(), 0L);
-        t.setDaemon(true);
-        if (t.getPriority() != 5) {
-            t.setPriority(5);
+    public Thread newThread(Runnable runnable) {
+        Thread thread = new Thread(this.group, runnable, this.namePrefix + this.threadNumber.getAndIncrement(), 0L);
+        thread.setDaemon(true);
+        if (thread.getPriority() != 5) {
+            thread.setPriority(5);
         }
-        return t;
+        return thread;
     }
 }
