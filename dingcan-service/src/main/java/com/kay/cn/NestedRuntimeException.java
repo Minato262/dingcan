@@ -2,15 +2,15 @@ package com.kay.cn;
 
 public abstract class NestedRuntimeException extends RuntimeException {
 
-    public NestedRuntimeException() {
+    protected NestedRuntimeException() {
         super();
     }
 
-    public NestedRuntimeException(String message) {
+    protected NestedRuntimeException(String message) {
         super(message);
     }
 
-    public NestedRuntimeException(Throwable cause) {
+    protected NestedRuntimeException(Throwable cause) {
         super(cause);
     }
 }

@@ -1,6 +1,4 @@
-package com.kay.cn.service;
-
-import com.kay.cn.NestedRuntimeException;
+package com.kay.cn;
 
 public class ServiceRuntimeException extends NestedRuntimeException {
 

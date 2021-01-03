@@ -4,6 +4,11 @@ import lombok.Data;
 
 import java.io.Serializable;
 
+/**
+ * result 返回
+ *
+ * @author kay
+ */
 @Data
 public final class Result implements Serializable {
     private static final long serialVersionUID = 1905122041950251207L;

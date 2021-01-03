@@ -3,6 +3,11 @@ package com.kay.cn.util;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicInteger;
 
+/**
+ * 线程名称工厂
+ *
+ * @author kay
+ */
 public class NamedThreadFactory implements ThreadFactory {
     private final ThreadGroup group;
     private final AtomicInteger threadNumber;

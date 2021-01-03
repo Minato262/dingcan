@@ -6,6 +6,11 @@ import org.springframework.beans.factory.BeanFactoryAware;
 import org.springframework.beans.factory.BeanInitializationException;
 import org.springframework.stereotype.Component;
 
+/**
+ * Bean 服务
+ *
+ * @author kay
+ */
 @Component
 public class BeanServiceFactory implements BeanFactoryAware {
 
@@ -19,7 +24,7 @@ public class BeanServiceFactory implements BeanFactoryAware {
     /**
      * 返回spring配置的bean
      */
-    public static Object getBean(String var1){
+    public static Object getBean(String var1) {
         if (beanFactory == null) {
             throw new BeanInitializationException("BeanServiceUtil init error, beanFactory is null");
         }
@@ -29,7 +34,7 @@ public class BeanServiceFactory implements BeanFactoryAware {
     /**
      * 返回spring配置的bean
      */
-    public static <T> T getBean(Class<T> requiredType){
+    public static <T> T getBean(Class<T> requiredType) {
         if (beanFactory == null) {
             throw new BeanInitializationException("BeanServiceUtil init error, beanFactory is null");
         }

@@ -17,18 +17,23 @@
     </modules>
 
     <properties>
-        <!-- project utf-8 -->
+        <!-- project-->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
+        <!-- framework -->
         <spring.boot.version>2.3.1.RELEASE</spring.boot.version>
+        <mybatis.spring.boot.version>2.1.2</mybatis.spring.boot.version>
+        <mysql.connector.version>8.0.21</mysql.connector.version>
 
         <!-- utils -->
         <lombok.version>1.18.8</lombok.version>
+        <orika.version>1.8.0</orika.version>
+        <caffeine.version>2.8.6</caffeine.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
-            <!-- spring boot -->
+            <!-- spring boot framework -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
@@ -54,6 +59,23 @@
                 <artifactId>spring-boot-starter-thymeleaf</artifactId>
                 <version>${spring.boot.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-jpa</artifactId>
+                <version>${spring.boot.version}</version>
+            </dependency>
+
+            <!-- mybatis framework -->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis.spring.boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.connector.version}</version>
+            </dependency>
 
             <!-- utils -->
             <dependency>
@@ -64,12 +86,23 @@
             <dependency>
                 <groupId>net.rakugakibox.spring.boot</groupId>
                 <artifactId>orika-spring-boot-starter</artifactId>
-                <version>1.8.0</version>
+                <version>${orika.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.google.guava</groupId>
-                <artifactId>guava</artifactId>
-                <version>18.0</version>
+                <groupId>com.github.ben-manes.caffeine</groupId>
+                <artifactId>caffeine</artifactId>
+                <version>${caffeine.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>2.4</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>1.6.1</version>
             </dependency>
 
             <!-- dingcan -->

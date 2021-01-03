@@ -1,6 +1,6 @@
 package com.kay.cn.manager.employee.cache;
 
-import com.kay.cn.service.ServiceRuntimeException;
+import com.kay.cn.ServiceRuntimeException;
 
 /**
  *
