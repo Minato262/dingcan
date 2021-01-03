@@ -1,6 +1,5 @@
 package com.kay.cn.service.impl;
 
-import com.kay.cn.manager.employee.EmployeeManager;
 import com.kay.cn.manager.employee.EmployeeSearch;
 import com.kay.cn.service.EmployeeService;
 import com.kay.cn.vo.EmployeeSearchVo;
@@ -20,15 +19,7 @@ import java.util.List;
 public class EmployeeServiceImpl implements EmployeeService {
 
     @Resource
-    private EmployeeManager employeeManager;
-
-    @Resource
     private EmployeeSearch employeeSearch;
-
-    @Override
-    public void list() {
-        employeeManager.test();
-    }
 
     @Override
     public List<EmployeeSearchVo> search(String keyword) {

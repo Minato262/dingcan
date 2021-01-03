@@ -23,12 +23,6 @@ public class EmployeeController {
     @Resource
     private EmployeeService employeeService;
 
-    @GetMapping("/list")
-    public Result list() {
-        employeeService.list();
-        return Result.success(null);
-    }
-
     @GetMapping("/search")
     public Result search(@RequestParam("keyword") String keyword) {
         List<EmployeeSearchVo> list = employeeService.search(keyword);

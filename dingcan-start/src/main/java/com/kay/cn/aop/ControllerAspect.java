@@ -38,10 +38,10 @@ public class ControllerAspect {
             final long startTime = System.currentTimeMillis();
             return afterLog(startTime, pjp.proceed(), sb);
         } catch (ServiceRuntimeException e) {
-            return Result.failed(e.getMessage());
+            return Result.failed(e.getCodeEnum());
         } catch (Throwable e) {
             log.error("error，e=", e);
-            return Result.failed(e.getMessage());
+            return Result.systemError(e.getMessage());
         }
     }
 

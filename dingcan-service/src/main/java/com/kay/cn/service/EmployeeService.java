@@ -6,7 +6,5 @@ import java.util.List;
 
 public interface EmployeeService {
 
-    void list();
-
     List<EmployeeSearchVo> search(String keyword);
 }

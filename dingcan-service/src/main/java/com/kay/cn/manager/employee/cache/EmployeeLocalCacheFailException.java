@@ -1,6 +1,7 @@
 package com.kay.cn.manager.employee.cache;
 
 import com.kay.cn.ServiceRuntimeException;
+import com.kay.cn.constract.ResultCodeEnum;
 
 /**
  *
@@ -10,6 +11,6 @@ import com.kay.cn.ServiceRuntimeException;
 public class EmployeeLocalCacheFailException extends ServiceRuntimeException {
 
     public EmployeeLocalCacheFailException() {
-        super();
+        super(ResultCodeEnum.EMPLOYEE_LOAD_CACHE_FAIL);
     }
 }
