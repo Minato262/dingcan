@@ -11,6 +11,11 @@ import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
 
+/**
+ * Controller 切面
+ *
+ * @author kay
+ */
 @Slf4j
 @Aspect
 @Component
