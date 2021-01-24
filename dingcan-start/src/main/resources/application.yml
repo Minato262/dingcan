@@ -1,7 +1,7 @@
 # springboot 默认配置
 server:
   application:
-    name: user-auth
+    name: dingcan
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: Asia/Shanghai

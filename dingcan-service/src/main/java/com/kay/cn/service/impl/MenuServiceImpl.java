@@ -1,6 +1,6 @@
 package com.kay.cn.service.impl;
 
-import com.kay.cn.service.MenuService;
+import com.kay.cn.MenuService;
 import org.springframework.stereotype.Service;
 
 @Service

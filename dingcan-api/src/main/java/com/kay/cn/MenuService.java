@@ -1,4 +1,4 @@
-package com.kay.cn.service;
+package com.kay.cn;
 
 public interface MenuService {
 }

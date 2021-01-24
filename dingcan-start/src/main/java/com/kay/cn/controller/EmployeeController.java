@@ -1,6 +1,6 @@
 package com.kay.cn.controller;
 
-import com.kay.cn.service.EmployeeService;
+import com.kay.cn.EmployeeService;
 import com.kay.cn.util.Result;
 import com.kay.cn.vo.EmployeeSearchVo;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,4 +1,4 @@
-package com.kay.cn.service;
+package com.kay.cn;
 
 import com.kay.cn.vo.EmployeeSearchVo;
 
