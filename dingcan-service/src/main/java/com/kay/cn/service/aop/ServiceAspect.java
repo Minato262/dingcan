@@ -11,9 +11,9 @@ import org.springframework.stereotype.Component;
  *
  * @author kay
  */
-@Slf4j
 @Aspect
 @Component
+@Slf4j
 public class ServiceAspect {
 
     /**

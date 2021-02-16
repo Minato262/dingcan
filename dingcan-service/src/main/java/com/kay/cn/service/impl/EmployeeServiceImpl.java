@@ -14,8 +14,8 @@ import java.util.List;
  *
  * @author kay
  */
-@Slf4j
 @Service
+@Slf4j
 public class EmployeeServiceImpl implements EmployeeService {
 
     @Resource

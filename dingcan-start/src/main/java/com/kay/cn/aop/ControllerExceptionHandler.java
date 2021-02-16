@@ -51,7 +51,7 @@ public class ControllerExceptionHandler {
      * Spring 参数校验框架统一错误返回
      * {@link MissingServletRequestParameterException} 异常处理
      *
-     * @param e BindException 参数校验框架异常
+     * @param e MissingServletRequestParameterException 参数校验框架异常
      */
     @ExceptionHandler(value = MissingServletRequestParameterException.class)
     @ResponseBody

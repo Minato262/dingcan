@@ -5,13 +5,19 @@ import com.kay.cn.tddl.mybatis.EmployeeMapper;
 import com.kay.cn.vo.EmployeeSearchVo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
-import org.springframework.util.CollectionUtils;
 
 import javax.annotation.Resource;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
+import static com.kay.cn.constract.Common.PAGE_SIZE;
+
+/**
+ * 员工信息资源
+ *
+ * @author kay
+ */
 @Component
 @Slf4j
 public class EmployeeResource {
@@ -19,13 +25,15 @@ public class EmployeeResource {
     @Resource
     private EmployeeMapper employeeMapper;
 
-    public Map<String, EmployeeSearchVo> getContent() {
+    public Map<String, EmployeeSearchVo> getAllEmployee() {
         Map<String, EmployeeSearchVo> map = new TreeMap<>();
         try {
-            List<Employess> list = employeeMapper.list();
-            if (!CollectionUtils.isEmpty(list)) {
+            int count = employeeMapper.count();
+            for (int i = 0; i < (count / PAGE_SIZE + 1); i++) {
+                List<Employess> list = employeeMapper.list(i);
                 for (Employess employee : list) {
-                    map.put(employee.getJobCode(), new EmployeeSearchVo(employee.getJobCode(), employee.getName()));
+                    EmployeeSearchVo searchVo = new EmployeeSearchVo(employee.getJobCode(), employee.getName());
+                    map.put(employee.getJobCode(), searchVo);
                 }
             }
         } catch (Exception e) {

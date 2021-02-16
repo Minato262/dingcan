@@ -10,7 +10,7 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
- * 员工表
+ * 员工信息表
  *
  * @author kay
  */
@@ -38,6 +38,8 @@ public class Employess implements Serializable {
 
     /**
      * 是否删除：0-否，1-是
+     *
+     * @see com.kay.cn.tddl.constract.IsDeleted
      */
     @TableField(value = "is_deleted")
     private Byte isDeleted;

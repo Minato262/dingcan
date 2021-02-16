@@ -3,6 +3,7 @@ package com.kay.cn.manager.employee.impl;
 import com.kay.cn.manager.employee.EmployeeSearch;
 import com.kay.cn.manager.employee.cache.EmployeeLocalCache;
 import com.kay.cn.vo.EmployeeSearchVo;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -15,6 +16,7 @@ import java.util.Map;
  * @author kay
  */
 @Component
+@Slf4j
 public class EmployeeSearchImpl implements EmployeeSearch {
 
     private static final EmployeeLocalCache CACHE_INSTANCE = EmployeeLocalCache.INSTANCE;
@@ -30,7 +32,7 @@ public class EmployeeSearchImpl implements EmployeeSearch {
             }
 
             EmployeeSearchVo value = entry.getValue();
-            if (value.getEmployeeRealName().contains(keyword) || value.getEmployeeJobCode().contains(keyword)) {
+            if (value.contains(keyword)) {
                 list.add(value);
             }
         }

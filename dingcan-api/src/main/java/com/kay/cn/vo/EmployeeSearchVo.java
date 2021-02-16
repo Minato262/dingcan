@@ -1,12 +1,10 @@
 package com.kay.cn.vo;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import java.io.Serializable;
 
-@Getter
-@Setter
+@Data
 public class EmployeeSearchVo implements Serializable {
 
     private String employeeJobCode;
@@ -19,8 +17,7 @@ public class EmployeeSearchVo implements Serializable {
         this.employeeRealName = employeeRealName;
     }
 
-    @Override
-    public String toString() {
-        return employeeJobCode + " " + employeeRealName;
+    public boolean contains(String keyword) {
+        return employeeRealName.contains(keyword) || employeeJobCode.contains(keyword);
     }
 }
