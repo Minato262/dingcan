@@ -1,5 +1,6 @@
 package com.kay.cn.manager.employee.load;
 
+import com.kay.cn.manager.employee.cache.EmployeeLocalCacheFailException;
 import com.kay.cn.tddl.domain.Employess;
 import com.kay.cn.tddl.mybatis.EmployeeMapper;
 import com.kay.cn.vo.EmployeeSearchVo;
@@ -36,9 +37,10 @@ public class EmployeeResource {
                     map.put(employee.getJobCode(), searchVo);
                 }
             }
+            return map;
         } catch (Exception e) {
             log.error("local employee error!", e);
+            throw new EmployeeLocalCacheFailException();
         }
-        return map;
     }
 }

@@ -4,7 +4,7 @@ import com.kay.cn.ServiceRuntimeException;
 import com.kay.cn.constract.ResultCodeEnum;
 
 /**
- *
+ * 员工信息载入缓存失败异常
  *
  * @author kay
  */
